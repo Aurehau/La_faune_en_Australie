@@ -2,41 +2,19 @@ const ctx = document.getElementById('myChart');
 
 const ctx2 = document.getElementById('myChart2');
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-
-
   const data = {
     labels: [
-      'Red',
-      'Blue',
-      'Yellow'
+      'Endémique',
+      "Venu d'ailleurs"
     ],
     datasets: [{
-      label: 'My First Dataset',
-      data: [300, 50, 100],
+      label: 'Pourcentage poisson et insect ',
+      data: [90, 10],
       backgroundColor: [
         '#FFCD05',
-        '#002858',
-        '#FFCD05'
+        '#002858'
       ],
-      hoverOffset: 4,
+      hoverOffset: 20,
       borderColor: '#000',
       borderWidth: 6
     }]
@@ -45,6 +23,10 @@ const ctx2 = document.getElementById('myChart2');
   const config = {
     type: 'pie',
     data: data,
+    rotation : '200',
   };
+
+  
+new Chart(ctx,config);
 
   new Chart(ctx2,config);
