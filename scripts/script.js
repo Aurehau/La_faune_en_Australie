@@ -12,11 +12,10 @@ const ctx2 = document.getElementById('myChart2');
       data: [90, 10],
       backgroundColor: [
         '#FFCD05',
-        '#002858'
+        '#B3907B'
       ],
-      hoverOffset: 20,
-      borderColor: '#000',
-      borderWidth: 6
+      hoverOffset: 40,
+      borderWidth: 0
     }]
   };
 
