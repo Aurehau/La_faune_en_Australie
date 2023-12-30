@@ -60,3 +60,25 @@ p{
 span{
     color: var(--Jaune);
 }
+
+
+canvas{
+    z-index: 7;
+}
+
+
+.test1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);
+    position: ;
+    margin:  auto 10px auto auto;
+    z-index: 5;
+    transform: translateY(-300px);
+    clip-path: polygon(41% 100%, 100% 0, 41% 100%, 0 100%, 0 0, 48% 51%);
+    border-radius: 100px;
+}
+
+.test1:hover{
+    background-color: #002858;
+}
