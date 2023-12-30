@@ -67,7 +67,7 @@ canvas{
 }
 
 
-.test1{
+.part1{
     width: 200px;
     height: 200px;
     background-color: rgb(255, 0, 0);
@@ -75,7 +75,7 @@ canvas{
     margin:  auto 10px auto auto;
     z-index: 5;
     transform: translateY(-300px);
-    clip-path: polygon(41% 100%, 100% 0, 41% 100%, 0 100%, 0 0, 48% 51%);
+    clip-path: polygon(var(--pointAX) var(--pointAY), 100% 0, var(--pointBX) var(--pointBY), 0 100%, var(--pointCX) var(--pointCY), 50% 50%);
     border-radius: 100px;
 }
 
