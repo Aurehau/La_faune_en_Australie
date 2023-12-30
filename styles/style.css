@@ -4,6 +4,7 @@
     --Jaune: #FFCD05;
     --bleu_foncé: #002858;
     --Sable: #B3907B;
+    --Vert: #9EB66C;
 }
 
 
@@ -67,18 +68,50 @@ canvas{
 }
 
 
-.part1{
-    width: 200px;
-    height: 200px;
-    background-color: rgb(255, 0, 0);
-    position: ;
-    margin:  auto 10px auto auto;
-    z-index: 5;
-    transform: translateY(-300px);
+.camembert div{
+    width: 97%;
+    height: 97%;
     clip-path: polygon(var(--pointAX) var(--pointAY), 100% 0, var(--pointBX) var(--pointBY), 0 100%, var(--pointCX) var(--pointCY), 50% 50%);
-    border-radius: 100px;
+    border-radius: 1000px;
+    grid-area: 1 / 1 ;
+    margin: auto;
+    transition: 0.4s;
 }
 
-.test1:hover{
-    background-color: #002858;
+.camembert div:hover{
+    width: 100%;
+    height: 100%;
+}
+
+.part1{
+    background-color: var(--Sable);
+}
+
+.part2{
+    background-color: var(--Jaune);
+}
+
+.part3{
+    background-color: var(--Vert);
+}
+
+.part1:hover{
+    background-color: #977967;
+}
+
+.part2:hover{
+    background-color: #eab50a;
+}
+
+.part3:hover{
+    background-color:  #7f9256;
+}
+
+.camembert{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin: 100px;
+    width: 400px;
+    height: 400px;
 }
