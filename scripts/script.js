@@ -62,23 +62,12 @@ function camembert(table) {
   return code;
 }
 
-document.querySelector(".marsupiales").innerHTML = camembert(régime);
+document.querySelector(".marsupiales").innerHTML = camembert(régime)+`<div class='cursor' id="cursor"></div>`;
 
-  const data = {
-    labels: [
-      'Endémique',
-      "Venu d'ailleurs"
-    ],
-    datasets: [{
-      label: 'Pourcentage poisson et insect ',
-      data: [90, 10],
-      backgroundColor: [
-        '#FFCD05',
-        '#B3907B'
-      ],
-      hoverOffset: 40,
-      borderWidth: 0
-    }]
-  };
+  const poisson_insect=[
+    {type:"Endémique", part:90},
+    {type:"Venu d'ailleurs", part: 10}
+    ];
 
+    document.querySelector(".poisson_insect").innerHTML = camembert(poisson_insect);
  

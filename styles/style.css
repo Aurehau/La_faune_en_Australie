@@ -14,18 +14,17 @@ body{
 
 .cursor {
     position: fixed;
-    border-radius: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%);
     pointer-events: none;
     left: -100px;
     top: 50%;
-    mix-blend-mode: difference; /*for dark and light modes */
-    background-color: transparent;
+     /*for dark and light modes */
     z-index: 10000;
-    border: 2px solid var(--Jaune);
-    height: 30px;
-    width: 30px;
+    height: 3px;
+    width: 3px;
     transition: all 300ms ease-out;
+    background-color: #FFF;
+    display: none;
   }
 
 h1{
@@ -79,10 +78,6 @@ span{
 }
 
 
-canvas{
-    z-index: 7;
-}
-
 
 .camembert div{
     width: 97%;
@@ -99,12 +94,18 @@ canvas{
     height: 100%;
 }
 
+.camembert:hover .cursor{
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
 .part1{
-    background-color: var(--Sable);
+    background-color: var(--Jaune);
 }
 
 .part2{
-    background-color: var(--Jaune);
+    background-color: var(--Sable);
 }
 
 .part3{
@@ -112,11 +113,11 @@ canvas{
 }
 
 .part1:hover{
-    background-color: #977967;
+    background-color: #eab50a;
 }
 
 .part2:hover{
-    background-color: #eab50a;
+    background-color: #977967;
 }
 
 .part3:hover{
