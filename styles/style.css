@@ -94,7 +94,7 @@ span{
     height: 100%;
 }
 
-.camembert .part:hover ~ .cursor{
+.part:hover ~ .cursor{
     width: 30px;
     height: 30px;
     display: block;
