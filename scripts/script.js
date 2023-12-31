@@ -58,11 +58,11 @@ function camembert(table) {
     coordonnéesABC[3]=100;
   }
 
-  code+=`<div style="--pointAX: ${coordonnéesABC[0]}%; --pointAY: ${coordonnéesABC[1]}%; --pointBX: ${coordonnéesABC[2]}%; --pointBY: ${coordonnéesABC[3]}%; --pointCX: ${coordonnéesABC[4]}%; --pointCY: ${coordonnéesABC[5]}%; " class="part${n}" ></div>`; });
-  return code;
+  code+=`<div style="--pointAX: ${coordonnéesABC[0]}%; --pointAY: ${coordonnéesABC[1]}%; --pointBX: ${coordonnéesABC[2]}%; --pointBY: ${coordonnéesABC[3]}%; --pointCX: ${coordonnéesABC[4]}%; --pointCY: ${coordonnéesABC[5]}%; " class="part part${n}" onmousemove="curseur(this)" ></div>`; });
+  return code+`<div class='cursor' id="cursor"></div>`;
 }
 
-document.querySelector(".marsupiales").innerHTML = camembert(régime)+`<div class='cursor' id="cursor"></div>`;
+document.querySelector(".marsupiales").innerHTML = camembert(régime);
 
   const poisson_insect=[
     {type:"Endémique", part:90},
