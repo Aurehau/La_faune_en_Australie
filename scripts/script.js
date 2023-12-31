@@ -60,7 +60,7 @@ function camembert(table) {
     }
 
     code+=`<div style="--pointAX: ${coordonnéesABC[0]}%; --pointAY: ${coordonnéesABC[1]}%; --pointBX: ${coordonnéesABC[2]}%; --pointBY: ${coordonnéesABC[3]}%; --pointCX: ${coordonnéesABC[4]}%; --pointCY: ${coordonnéesABC[5]}%; " class="part part${n}" onmousemove="curseur(this)" ></div>`; 
-    info+=`<div class='info info${n}'><div class='type'>${element.type}</div><div class='pourcentage'>${pourcentage}</div><div class='nbespeces'><span class='nb'>${element.part}</span> espèces</div></div>`;
+    info+=`<div class='info info${n}'><div class='type'>${element.type}</div><div class='pourcentage'>${Math.round(pourcentage)}%</div><div class='nbespeces'><span class='nb'>${element.part}</span> espèces</div></div>`;
   });
 
   return code+`<div class='cursor' id="cursor">`+info+`</div>`;

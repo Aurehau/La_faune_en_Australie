@@ -97,7 +97,15 @@ span{
 .part:hover ~ .cursor{
     width: 30px;
     height: 30px;
-    display: block;
+    display: inline-block;
+} 
+
+.info{
+    display: none;
+}
+
+.part1:hover ~ .cursor>.info1, .part2:hover ~ .cursor>.info2, .part3:hover ~ .cursor>.info3{
+    display:block;
 }
 
 .part1{
