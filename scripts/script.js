@@ -91,6 +91,7 @@ function graphique(table) {
   let année_min= table[0].année;
   let année_max= 0;
   let nb_max= 0;
+  let coordonnées=[0,0] ;
   let degré= 0;
   let code="";
   let n = 0;
@@ -108,9 +109,17 @@ function graphique(table) {
     }   
   });
  
-  année_min = Math.floor1O(année_min , 1);
-  année_max = Math.ceil10(année_max , 1);
-  nb_max = Math.ceil10(nb_max, decimale(nb_max));
+  année_min = Math.floor1O(année_min / 10)*10;
+  année_max = Math.ceil10(année_max / 10)*10;
+  let plage_année=année_max-année_min;
+  nb_max = Math.ceil10(nb_max / decimale(nb_max)*decimale(nb_max));
+
+  table.forEach(function(element){
+    coordonnées[0]=((element.année-année_min)*100)/plage_année;
+    coordonnées[1]=100-((element.nb*100)/nb_max);
+    code+=`<div class='point' style="--axe_anné:${coordonnées[0]}%; --axe_nb:${coordonnées[1]}%;></div>`;
+  });
+
 }
 
 function decimale(nbr){
@@ -123,5 +132,5 @@ function decimale(nbr){
 }
 
 
-console.log(decimale(18000));
-console.log(Math.ceil(18000/ decimale(18000))*decimale(18000));
+console.log(decimale(500005890));
+console.log(Math.ceil(500005890/ decimale(500005890))*decimale(500005890));
