@@ -78,7 +78,7 @@ document.querySelector(".poisson_insect").innerHTML = camembert(poisson_insect);
 
 const évolution_lapin=[
   {année: 1859, nb:24},
-  {année: 1865, nb: 220000000},
+  {année: 1865, nb: 22000000},
   {année: 1950, nb: 600000000},
   {année: 1957, nb: 100000000},
   {année: 1967, nb: 100000000},
@@ -92,7 +92,7 @@ function graphique(table) {
   let année_max= 0;
   let nb_max= 0;
   let coordonnées=[0,0] ;
-  let degré= 0;
+  let point= '';
   let code="";
   let n = 0;
   let info ="";
@@ -109,16 +109,20 @@ function graphique(table) {
     }   
   });
  
-  année_min = Math.floor1O(année_min / 10)*10;
-  année_max = Math.ceil10(année_max / 10)*10;
   let plage_année=année_max-année_min;
-  nb_max = Math.ceil10(nb_max / decimale(nb_max)*decimale(nb_max));
+  nb_max = Math.ceil(nb_max / decimale(nb_max)*decimale(nb_max));
 
   table.forEach(function(element){
     coordonnées[0]=((element.année-année_min)*100)/plage_année;
     coordonnées[1]=100-((element.nb*100)/nb_max);
     code+=`<div class='point' style="--axe_anné:${coordonnées[0]}%; --axe_nb:${coordonnées[1]}%;></div>`;
+    point+=`L${((coordonnées[0]*1094)/100)+6} ${((coordonnées[1]*601)/100)}`;
   });
+
+  let courbe = `<svg xmlns="http://www.w3.org/2000/svg" width="90vw" height="50vw" viewBox="0 0 1106 600" fill="none">
+                  <path d="M6 601H6${point}"stroke="#FFCD05" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`;
+  return courbe;
 
 }
 
@@ -132,5 +136,7 @@ function decimale(nbr){
 }
 
 
+document.querySelector(".graph").innerHTML = graphique(évolution_lapin);
+console.log(graphique(évolution_lapin));
 console.log(decimale(500005890));
 console.log(Math.ceil(500005890/ decimale(500005890))*decimale(500005890));
