@@ -74,4 +74,27 @@ const poisson_insect=[
   ];
 
 document.querySelector(".poisson_insect").innerHTML = camembert(poisson_insect);
- 
+
+
+const évolution_lapin=[
+  {année: 1859, nb:24},
+  {année: 1865, nb: 220000000},
+  {année: 1950, nb: 600000000},
+  {année: 1957, nb: 100000000},
+  {année: 1967, nb: 100000000},
+  {année: 1991, nb: 230000000},
+  {année: 2023, nb: 300000000}
+  ];
+
+
+function diviseur(nbr){
+  let compteur= 0;
+  for (let pas=0; nbr>10; pas++){
+    compteur+=1;
+    nbr=nbr/10;
+  }
+  return Math.pow(10, compteur);
+}
+
+
+console.log(diviseur(18000));

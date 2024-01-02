@@ -5,6 +5,7 @@
     --bleu_foncé: #002858;
     --Sable: #B3907B;
     --Vert: #9EB66C;
+    --gris: #2a2b2e;
 }
 
 
@@ -14,16 +15,11 @@ body{
 
 .cursor {
     position: fixed;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-100%);
     pointer-events: none;
-    left: -100px;
-    top: 50%;
      /*for dark and light modes */
     z-index: 10000;
-    height: 3px;
-    width: 3px;
     transition: all 300ms ease-out;
-    background-color: #FFF;
     display: none;
   }
 
@@ -95,17 +91,72 @@ span{
 }
 
 .part:hover ~ .cursor{
-    width: 30px;
-    height: 30px;
-    display: inline-block;
+    width: auto;
+    height: auto;
+    display: block;
 } 
 
 .info{
     display: none;
+    background-color: var(--gris);
+    /* display: grid; */
+    float: left;
+    height: 54.4px;
+    border-radius: 4px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 15px;
+    padding: 0px 8px 0px 13px;
 }
 
 .part1:hover ~ .cursor>.info1, .part2:hover ~ .cursor>.info2, .part3:hover ~ .cursor>.info3{
-    display:block;
+    display: grid;
+    float: left;
+    height: 54.4px;
+    border-radius: 4px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 15px;
+    padding: 0px 8px 0px 13px;
+}
+
+.type{
+    display: grid;
+    background-color: #ff6200;
+    grid-area: 1 / 1 ;
+    font-size: 16px;
+    font-family: 'Kanit';
+    color: var(--Blanc);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 6px;
+}
+
+.pourcentage{
+    display: grid;
+    /* background-color: #00ff08; */
+    grid-area: 1 / 2 / 3 / 3;
+    font-size: 36px;
+    font-family: 'Kanit';
+    color: var(--Blanc);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--Jaune);
+}
+
+.nbespeces{
+    display: grid;
+/*     background-color: #ff00d0; */
+    grid-area: 2 / 1 ;
+    font-size: 14px;
+    font-family: 'Kanit';
+    color: var(--Blanc);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 6px;
 }
 
 .part1{
