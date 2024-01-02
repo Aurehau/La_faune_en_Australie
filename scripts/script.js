@@ -87,9 +87,35 @@ const évolution_lapin=[
   ];
 
 
-function diviseur(nbr){
+function graphique(table) {
+  let année_min= table[0].année;
+  let année_max= 0;
+  let nb_max= 0;
+  let degré= 0;
+  let code="";
+  let n = 0;
+  let info ="";
+
+  table.forEach(function(element){
+    if(element.nb>nb_max){
+      nb_max=element.nb;
+    } 
+    if(element.année>année_max){
+      année_max=element.année;
+    } 
+    if(element.année<année_min){
+      année_min=element.année;
+    }   
+  });
+ 
+  année_min = Math.floor1O(année_min , 1);
+  année_max = Math.ceil10(année_max , 1);
+  nb_max = Math.ceil10(nb_max, decimale(nb_max));
+}
+
+function decimale(nbr){
   let compteur= 0;
-  for (let pas=0; nbr>10; pas++){
+  for ( ;nbr>10; ){
     compteur+=1;
     nbr=nbr/10;
   }
@@ -97,4 +123,5 @@ function diviseur(nbr){
 }
 
 
-console.log(diviseur(18000));
+console.log(decimale(18000));
+console.log(Math.ceil(18000/ decimale(18000))*decimale(18000));
