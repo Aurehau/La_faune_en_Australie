@@ -94,6 +94,7 @@ function graphique(table) {
   let coordonnées=[0,0] ;
   let point= '';
   let code="";
+  let boule="";
   let n = 0;
   let info ="";
 
@@ -116,12 +117,16 @@ function graphique(table) {
     coordonnées[0]=((element.année-année_min)*100)/plage_année;
     coordonnées[1]=100-((element.nb*100)/nb_max);
     code+=`<div class='point' style="--axe_anné:${coordonnées[0]}%; --axe_nb:${coordonnées[1]}%;></div>`;
-    point+=`L${((coordonnées[0]*1094)/100)+6} ${((coordonnées[1]*601)/100)}`;
+    point+=`L${((coordonnées[0]*1094)/100)+6} ${((coordonnées[1]*401)/100)}`;
+    boule+=`<div style=" left:${coordonnées[0]}%;  top:${coordonnées[1]}%"></div>`
   });
 
-  let courbe = `<svg xmlns="http://www.w3.org/2000/svg" width="90vw" height="50vw" viewBox="0 0 1106 600" fill="none">
-                  <path d="M6 601H6${point}"stroke="#FFCD05" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>`;
+  let courbe = `<div class="population"><div>${nb_max}</div> <div>${nb_max*0.75}</div> <div>${nb_max*0.5}</div> <div>${nb_max*0.25}</div> <div>0</div></div>
+                <div class="années"><div>${année_min}</div>  <div>${Math.round((année_min+(plage_année*0.2))/10)*10}</div> <div>${Math.round((année_min+(plage_année*0.4))/10)*10}</div> <div>${Math.round((année_min+(plage_année*0.6))/10)*10}</div> <div>${Math.round((année_min+(plage_année*0.8))/10)*10}</div>   <div>${année_max}</div></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70vw" height=25vw" viewBox="0 0 1106 400" fill="none">
+                  <path d="M6 401H6${point}"stroke="#FFCD05" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="points">${boule}</div>`;
   return courbe;
 
 }
@@ -136,7 +141,7 @@ function decimale(nbr){
 }
 
 
-document.querySelector(".graph").innerHTML = graphique(évolution_lapin);
+document.querySelector(".graph").innerHTML += graphique(évolution_lapin);
 console.log(graphique(évolution_lapin));
 console.log(decimale(500005890));
 console.log(Math.ceil(500005890/ decimale(500005890))*decimale(500005890));
