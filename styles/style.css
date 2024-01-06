@@ -353,4 +353,25 @@ span{
     }
 
     }
+
+
+.carte path {
+    animation: AnimCarte 10s cubic-bezier(0.18,-0.08, 0.57, 0.42) infinite;
+    }
+    
+    @keyframes AnimCarte {
+    0% {
+        d:path(var(--etape1));
+    }
+    25% {
+        d:path(var(--etape2));    
+    }
+    50% {
+        d:path(var(--etape3));    
+    }
+    75%,100% {
+        d:path(var(--etape4));    
+    }
+    
+    }
   
