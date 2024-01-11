@@ -118,7 +118,7 @@ function graphique(table) {
     coordonnées[1]=100-((element.nb*100)/nb_max);
     code+=`<div class='point' style="--axe_anné:${coordonnées[0]}%; --axe_nb:${coordonnées[1]}%;></div>`;
     point+=`L${((coordonnées[0]*1094)/100)+6} ${((coordonnées[1]*401)/100)}`;
-    boule+=`<div style=" left:${coordonnées[0]}%;  top:${coordonnées[1]}%"></div>`
+    boule+=`<div style=" left:${coordonnées[0]}%;  top:${coordonnées[1]}%"><div class='cursor' id="cursor"><div class='année'>${element.année}</div><div class='nblapin'>${ajout_espace(element.nb)} lapin</div></div></div>`
   });
 
   let courbe = `<div class="population"><div>${grandNombre(nb_max)}</div> <div>${grandNombre(nb_max*0.75)}</div> <div>${grandNombre(nb_max*0.5)}</div> <div>${grandNombre(nb_max*0.25)}</div> <div>0</div></div>
@@ -152,8 +152,21 @@ function grandNombre(nbr){
   }
 }
 
+function ajout_espace(nbr){
+  let affichage='';
+  nb=String(nbr);
+  for ( let i=0 ; i <nb.length; i++ ){
+    if((i%3)==0){
+      affichage+=" "+nb[i];
+    }
+    else{
+      affichage+=nb[i];
+    }
+  }
+  return affichage;
+}
+
 
 document.querySelector(".graph").innerHTML += graphique(évolution_lapin);
-console.log(graphique(évolution_lapin));
 console.log(decimale(500005890));
 console.log(Math.ceil(500005890/ decimale(500005890))*decimale(500005890));

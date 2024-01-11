@@ -75,7 +75,7 @@ span{
 
 
 
-.camembert div{
+.camembert>div{
     width: 97%;
     height: 97%;
     clip-path: polygon(var(--pointAX) var(--pointAY), 100% 0, var(--pointBX) var(--pointBY), 0 100%, var(--pointCX) var(--pointCY), 50% 50%);
@@ -121,7 +121,6 @@ span{
 }
 
 .type{
-    background-color: #ff6200;
     grid-area: 1 / 1 ;
     font-size: 16px;
     font-family: 'Kanit';
@@ -273,14 +272,14 @@ span{
     position: relative;
 }
 
-.points div{
+.points>div{
     position: absolute;
     background:  radial-gradient( var(--Jaune), #f2a218);
     height: 1.7vw;
     width: 1.7vw;
     border-radius: 100px;
     transform: translateX(-50%) translateY(-50%);
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .points div:hover{
@@ -314,6 +313,26 @@ span{
 .années div:last-child{
     margin: 0px 0px 0px auto;
 }
+
+
+.points div:hover>.cursor{
+    display: block;
+    background-color: var(--gris);
+    /* display: grid; */
+    float: left;
+    height: 54.4px;
+    border-radius: 4px;
+    padding: 0px 8px 0px 13px;
+}
+
+.année{
+    color: var(--Blanc);
+}
+
+.nblapin{
+    color: var(--Jaune);
+}
+
 
 
 /* animation svg */
@@ -375,3 +394,4 @@ span{
     
     }
   
+
