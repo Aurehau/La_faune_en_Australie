@@ -92,11 +92,12 @@ function graphique(table) {
   let année_max= 0;
   let nb_max= 0;
   let coordonnées=[0,0] ;
+  let toutes_les_coordonnées=[];
   let point= '';
   let code="";
   let boule="";
-  let n = 0;
-  let info ="";
+  let icones="";
+
 
   table.forEach(function(element){
     if(element.nb>nb_max){
@@ -117,15 +118,27 @@ function graphique(table) {
     coordonnées[0]=((element.année-année_min)*100)/plage_année;
     coordonnées[1]=100-((element.nb*100)/nb_max);
     code+=`<div class='point' style="--axe_anné:${coordonnées[0]}%; --axe_nb:${coordonnées[1]}%;></div>`;
-    point+=`L${((coordonnées[0]*1094)/100)+6} ${((coordonnées[1]*401)/100)}`;
+    point+=`L${((coordonnées[0]*1094)/100)+6} ${((coordonnées[1]*401)/100)}`;  // point de la courbe svg
+    toutes_les_coordonnées.push({x:((coordonnées[0]*1094)/100),y:(((100-coordonnées[1])*401)/100)});
     boule+=`<div style=" left:${coordonnées[0]}%;  top:${coordonnées[1]}%"><div class='cursor' id="cursor"><div class='année'>${element.année}</div><div class='nblapin'>${ajout_espace(element.nb)} lapin</div></div></div>`
   });
 
+  console.log(toutes_les_coordonnées);
+  for ( let i=0 ; i <toutes_les_coordonnées.length-1; i++ ){   // attention au -1 qui peut tout casser
+    
+      icones+=`    <svg  class="lapin" xmlns="http://www.w3.org/2000/svg" width="8vw" height="6.4vw" viewBox="0 0 312 249" fill="none" style="--angleL: ${angle(i,toutes_les_coordonnées)}deg"><path stroke="#FFCD05" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
+      console.log(icones);
+    
+  };
+
+
+
   let courbe = `<div class="population"><div>${grandNombre(nb_max)}</div> <div>${grandNombre(nb_max*0.75)}</div> <div>${grandNombre(nb_max*0.5)}</div> <div>${grandNombre(nb_max*0.25)}</div> <div>0</div></div>
                 <div class="années"><div>${année_min}</div>  <div>${Math.round((année_min+(plage_année*0.2))/10)*10}</div> <div>${Math.round((année_min+(plage_année*0.4))/10)*10}</div> <div>${Math.round((année_min+(plage_année*0.6))/10)*10}</div> <div>${Math.round((année_min+(plage_année*0.8))/10)*10}</div>   <div>${année_max}</div></div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="70vw" height=25vw" viewBox="0 0 1106 400" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70vw" height="26.2vw" viewBox="0 0 1106 400" fill="none">
                   <path d="M6 401H6${point}"stroke="#FFCD05" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
+                <div class="icone">${icones}</div>
                 <div class="points">${boule}</div>`;
   return courbe;
 
@@ -167,6 +180,15 @@ function ajout_espace(nbr){
 }
 
 
+function angle(i,liste){
+  let AC=liste[i+1].x - liste[i].x;        // C est un point qui prend la valeur X de B et la valeur y de A ce qui permet d'avoir un triangle rectangle en C pour calculer l'angle CÂB 
+  let BC=(liste[i+1].y)-(liste[i].y);
+  return 90-(Math.atan(AC/BC) * (180 / Math.PI));
+}
+
+
 document.querySelector(".graph").innerHTML += graphique(évolution_lapin);
 console.log(decimale(500005890));
 console.log(Math.ceil(500005890/ decimale(500005890))*decimale(500005890));
+console.log( Math.atan(5/7) * (180 / Math.PI));
+console.log(Math.atan(-0.029996) * (180 / Math.PI));

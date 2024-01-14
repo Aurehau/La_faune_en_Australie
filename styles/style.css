@@ -259,10 +259,10 @@ span{
 
 
 
-.graph svg{
+.graph>svg{
     grid-area: 1 / 2 ;
     /* z-index: 5; */
-    margin: -1px 0px 24px 0px;
+    margin: 8px 0px 8px 0px;
 }
 
 .points{
@@ -334,11 +334,18 @@ span{
 }
 
 
+.icone{
+    grid-area: 1/2;
+    position: relative;
+}
+
+
+
 
 /* animation svg */
 
 .lapin {
-    transform: scaleX(-1) ;
+    transform: scaleX(-1) rotate(var(--angleL)) ;
   }
 
 .lapin path {
