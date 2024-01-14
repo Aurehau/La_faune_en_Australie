@@ -345,7 +345,8 @@ span{
 /* animation svg */
 
 .lapin {
-    transform: scaleX(-1) rotate(var(--angleL)) ;
+    transform: scaleX(-1) rotate(var(--angleL)) translateY(-150%) translateX(25%);
+    position: absolute;
   }
 
 .lapin path {

@@ -125,9 +125,10 @@ function graphique(table) {
 
   console.log(toutes_les_coordonnées);
   for ( let i=0 ; i <toutes_les_coordonnées.length-1; i++ ){   // attention au -1 qui peut tout casser
-    
-      icones+=`    <svg  class="lapin" xmlns="http://www.w3.org/2000/svg" width="8vw" height="6.4vw" viewBox="0 0 312 249" fill="none" style="--angleL: ${angle(i,toutes_les_coordonnées)}deg"><path stroke="#FFCD05" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
-      console.log(icones);
+    if(toutes_les_coordonnées[i+1].y>toutes_les_coordonnées[i].y && 42<(toutes_les_coordonnées[i+1].y-toutes_les_coordonnées[i].y)){
+        icones+=`    <svg  class="lapin" xmlns="http://www.w3.org/2000/svg" width="8vw" height="6.4vw" viewBox="0 0 312 249" fill="none" style="--angleL: ${angle(i,toutes_les_coordonnées)}deg; ${positionL(i,toutes_les_coordonnées)}"><path stroke="#FFCD05" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
+        console.log(icones);
+    }
     
   };
 
@@ -186,6 +187,11 @@ function angle(i,liste){
   return 90-(Math.atan(AC/BC) * (180 / Math.PI));
 }
 
+function positionL(i,liste){
+  let Dx= liste[i+1].x - ((liste[i+1].x - liste[i].x)/2); // D est le point au centre d'une droite pour positionner les icones
+  let Dy= liste[i+1].y - ((liste[i+1].y - liste[i].y)/2);
+  return ` left:${(Dx*100)/1094}%; top:${100-((Dy*100)/401)}%;`
+}
 
 document.querySelector(".graph").innerHTML += graphique(évolution_lapin);
 console.log(decimale(500005890));
