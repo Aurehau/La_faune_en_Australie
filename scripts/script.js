@@ -75,6 +75,35 @@ const poisson_insect=[
 
 document.querySelector(".poisson_insect").innerHTML = camembert(poisson_insect);
 
+const mammifères=[
+  {type:"Endémique", part:336},
+  {type:"Venu d'ailleurs", part: 50}
+  ];
+
+document.querySelector(".mammifères").innerHTML = camembert(mammifères);
+
+const reptiles=[
+  {type:"Endémique", part:853},
+  {type:"Venu d'ailleurs", part: 64}
+  ];
+
+document.querySelector(".reptiles").innerHTML = camembert(reptiles);
+
+const amphibiens=[
+  {type:"Endémique", part:213},
+  {type:"Venu d'ailleurs", part: 14}
+  ];
+
+document.querySelector(".amphibiens").innerHTML = camembert(amphibiens);
+
+const serpent=[
+  {type:"Non venimeux", part: 74},
+  {type:"", part: 0},
+  {type:"Venimeux", part:139}
+  ];
+
+document.querySelector(".serpent").innerHTML = camembert(serpent);
+
 
 const évolution_lapin=[
   {année: 1859, nb:24},

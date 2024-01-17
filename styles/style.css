@@ -11,6 +11,7 @@
 
 body{
     background: var(--Noir);
+    margin: 0%;
 }
 
 .cursor {
@@ -435,7 +436,7 @@ span{
 .code_couleur>div>div{
     height: 50px;
     width: 70px;
-    border-radius: 1px;
+    border-radius: 3px;
     margin: auto;
 }
 
@@ -454,8 +455,45 @@ span{
     margin: auto 7.5%;
 }
 
-.flex_par2 p{
+.compteur p{
     width: 33vw;
     margin: auto 0px 0px 0px;
     height: fit-content;
 }
+
+.le_S{
+    margin: auto 7.5% auto 0px;
+    align-items: center;
+}
+
+.le_S>div{
+    width: 42.5vw;
+    justify-content: center;
+}
+
+.le_S>div>.code_couleur{
+    margin-top: 40px;
+}
+
+.serpent_img{
+    width: 50vw;
+    transform: scaleX(-1);
+    height: fit-content;
+}
+
+.serpent{
+    width: 30vw;
+    height: 30vw;
+}
+
+
+
+
+
+
+/* Footer */
+
+footer{
+    background-color: var(--Jaune);
+}
+
