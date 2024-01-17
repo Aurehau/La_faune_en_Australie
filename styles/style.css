@@ -510,11 +510,10 @@ footer{
     width: 150px;
     position: absolute;
     z-index: 9;
-    border: #a51313 solid;
     border-radius: 100px 100px 30px 30px ;
-    margin-top: 100%;
+    bottom: 0px;
     margin-left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(5%);
 }
 
 
