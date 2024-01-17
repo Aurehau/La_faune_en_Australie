@@ -23,13 +23,16 @@ body{
     display: none;
   }
 
+
+/* texte principaux */
+
 h1{
     color: var(--Jaune);
     font-size: 96px;
     font-family: 'Kanit';
     font-weight: 500;
-    margin-left: 130px;
-    margin-right:130px;
+    margin-left: 7.5%;
+    margin-right:7.5%;
     position: relative;
     display: inline;
 }
@@ -45,20 +48,20 @@ h1{
 
 h2{
     color: var(--Blanc);
-    font-size: 64px;
+    font-size: 50px;
     font-family: 'Kanit';
-    margin-left: 130px;
-    margin-right:130px;
+    margin-left: 7.5%;
+    margin-right:7.5%;
     font-weight: 500;
 }
 
 p{
     color: var(--Blanc);
-    font-size: 40px;
+    font-size: 26px;
     font-family: 'Kanit';
     font-weight: 400;
-    margin-left: 130px;
-    margin-right:130px;
+    margin-left: 7.5%;
+    margin-right:7.5%;
     
 }
 
@@ -73,6 +76,9 @@ span{
     color: var(--Jaune);
 }
 
+
+
+/* graphiques */
 
 
 .camembert>div{
@@ -132,8 +138,6 @@ span{
 }
 
 .pourcentage{
-
-    /* background-color: #00ff08; */
     grid-area: 1 / 2 / 3 / 3;
     font-size: 36px;
     font-family: 'Kanit';
@@ -144,7 +148,6 @@ span{
 }
 
 .nbespeces{
-/*     background-color: #ff00d0; */
     grid-area: 2 / 1 ;
     font-size: 14px;
     font-family: 'Kanit';
@@ -183,7 +186,7 @@ span{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    margin: 100px;
+    margin: auto;
     width: 400px;
     height: 400px;
 }
@@ -403,3 +406,56 @@ span{
     }
   
 
+/* placemant élément */
+
+.espece_endemique{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin: 0px 7.5%;
+    gap: 20px;
+}
+
+
+.espece_endemique>div:last-child{
+    grid-area: 2/3;
+    margin: auto;
+}
+
+.code_couleur{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.code_couleur>div{
+    width: 30%;
+    text-align: center;
+}
+
+.code_couleur>div>div{
+    height: 50px;
+    width: 70px;
+    border-radius: 1px;
+    margin: auto;
+}
+
+.carre_jaune{
+    background-color: var(--Jaune);
+}
+.carre_sable{
+    background-color: var(--Sable);
+}
+.carre_vert{
+    background-color: var(--Vert);
+}
+
+.flex_par2{
+    display: flex;
+    margin: auto 7.5%;
+}
+
+.flex_par2 p{
+    width: 33vw;
+    margin: auto 0px 0px 0px;
+    height: fit-content;
+}
