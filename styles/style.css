@@ -497,3 +497,20 @@ footer{
     background-color: var(--Jaune);
 }
 
+
+
+
+/* images animeaux */
+
+.box{
+    position: relative;
+}
+
+.rainette{
+    width: 200px;
+    position: absolute;
+    z-index: 9;
+    border: #000000 solid;
+}
+
+
