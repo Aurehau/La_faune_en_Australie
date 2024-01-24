@@ -51,6 +51,7 @@ h2{
     color: var(--Blanc);
     font-size: 50px;
     font-family: 'Kanit';
+    margin-top: 150px;
     margin-left: 7.5%;
     margin-right:7.5%;
     font-weight: 500;
@@ -455,6 +456,10 @@ span{
     margin: auto 7.5%;
 }
 
+.flex_par2>p{
+    margin: 0px;
+}
+
 .compteur p{
     width: 33vw;
     margin: auto 0px 0px 0px;
@@ -487,7 +492,42 @@ span{
 }
 
 
+/* monomètre */
 
+.img_monomètres{
+    display: flex;
+    margin: 15vw 7.5% 10vw;
+    transition: 0.6s;
+    height: 20vw;
+}
+
+.img_monomètres>img{
+    height: auto;
+    width: 15vw;
+    margin: auto;
+    transition: 0.6s;
+}
+
+.monoAustralie:hover{
+    scale: 2;
+    transform: translateY(-100%);
+}
+
+.img_monomètres:hover{
+    margin: 25vw 10% 0vw ;
+    gap: -2vw;
+}
+
+/* venimeux */
+
+.dégradé{
+
+}
+
+.dégradé>img{
+    width: 15vw;
+    display: block;
+}
 
 
 
