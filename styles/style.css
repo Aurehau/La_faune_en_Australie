@@ -211,7 +211,7 @@ span{
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     column-gap: 15px;
-    margin: 0px auto 0px auto;
+    margin: 50px auto 100px auto;
 }
 
 .population{
@@ -417,7 +417,6 @@ span{
     gap: 20px;
 }
 
-
 .espece_endemique>div:last-child{
     grid-area: 2/3;
     margin: auto;
@@ -427,6 +426,7 @@ span{
     display: flex;
     justify-content: center;
     margin: auto;
+    width: 100%;
 }
 
 .code_couleur>div{
@@ -521,7 +521,9 @@ span{
 /* venimeux */
 
 .dégradé{
-    padding: 40px 0px;
+    padding: 40px 20px 50px;
+    background: linear-gradient(var(--Noir) , var(--bleu_foncé), var(--Noir));
+
 }
 
 .dégradé>img{
@@ -540,6 +542,16 @@ span{
 }
 
 
+/* marsupiales */
+
+.marsupiales{
+    height: 45vw;
+    width: 45vw;
+    max-height: 560px;
+    max-width: 560px;
+}
+
+
 
 /* Footer */
 
@@ -552,18 +564,84 @@ footer{
 
 /* images animeaux */
 
+
+.espece_endemique .camembert{
+    height: 25vw;
+    width: 25vw;
+}
 .box{
     position: relative;
+    height: fit-content;
+    margin-bottom: 30px;
 }
 
 .rainette{
-    width: 150px;
+    width: 10vw;
     position: absolute;
-    z-index: 9;
+    z-index: 8;
     border-radius: 100px 100px 30px 30px ;
     bottom: 0px;
     margin-left: 50%;
     transform: translateX(-50%) translateY(5%);
 }
 
+.box h3{
+    position: absolute;
+    color: var(--Blanc);
+    font-size: 20px;
+    font-family: 'Kanit';
+    font-weight: 500;
+    margin: 0px;
+    background-color: var(--gris);
+    padding: 0px 15px;
+    z-index: 9;
+    bottom: 0px;
+    margin-left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    border-radius: 3px;
+    text-align: center;
+    white-space: nowrap;
+}
 
+.box>img{
+    position: absolute;
+}
+
+
+/* mammifère */
+
+.chauve-souris{
+    width: 10vw;
+    z-index: 8;
+    border-radius: 100px 100px 30px 30px ;
+    bottom: 0px;
+    margin-left: 50%;
+    transform: translateX(-50%) translateY(5%);
+}
+
+.dingos{
+    width: 10vw;
+    z-index: 8;
+    border-radius: 100px 100px 30px 30px ;
+    bottom: 0px;
+    margin-left: 50%;
+    transform: translateX(-50%) translateY(5%);
+}
+
+.dugong{
+    width: 10vw;
+    z-index: 8;
+    border-radius: 100px 100px 30px 30px ;
+    bottom: 0px;
+    margin-left: 50%;
+    transform: translateX(-50%) translateY(5%);
+}
+
+.lion-de-mer{
+    width: 10vw;
+    z-index: 8;
+    border-radius: 100px 100px 30px 30px ;
+    bottom: 0px;
+    margin-left: 50%;
+    transform: translateX(-50%) translateY(5%);
+}
