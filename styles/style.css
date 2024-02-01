@@ -512,10 +512,11 @@ span{
     transition: 1s;
 }
 
-.monoAustralie_grand{
+.monoAustralie_grand>img{
     scale: 2;
     transform: translateY(-100%);
 }
+
 
 .img_monomètres_petit{
     margin: 25vw 10% 0vw ;
@@ -523,10 +524,7 @@ span{
 }
 
 
-.img_monomètres>.monoAustralie_grand>.cursor{
-    scale: 1;
-    transform: translateY(-100%);
-}
+
 
 
 /* venimeux */
@@ -653,14 +651,21 @@ footer{
 .emeu{
     position:absolute;
     height: 20dvw;
-    transform: translateY(calc(-96% - 50px));
     margin-left: 20%;
+    margin-top:-20dvw;
 }
+.emeu>img{
+    transform: translateY(calc(4% - 50px));
+}
+
 .manchot{
     position:absolute;
     height: 10dvw;
-    transform: translateY(calc(-90% - 50px));
     margin-left: 55%;
+    margin-top:-10dvw;
+}
+.manchot>img{
+    transform: translateY(calc(9% - 50px));
 }
 
 
