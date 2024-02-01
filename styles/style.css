@@ -328,6 +328,7 @@ span{
     height: 54.4px;
     border-radius: 4px;
     padding: 0px 8px 0px 13px;
+    align-items: center;
 }
 
 .année{
@@ -336,6 +337,7 @@ span{
 
 .nblapin{
     color: var(--Jaune);
+    white-space: nowrap;
 }
 
 
@@ -522,7 +524,7 @@ span{
 
 .dégradé{
     padding: 40px 20px 50px;
-    background: linear-gradient(var(--Noir) , var(--bleu_foncé), var(--Noir));
+    background: linear-gradient(var(--Noir) 20%, var(--bleu_foncé)50% 70%, var(--Noir));
 
 }
 
@@ -534,11 +536,15 @@ span{
 }
 
 .gauche{
-    margin: -3% 0px -3% auto;
+    margin: -3% 20px -3% auto;
 }
 
 .retournement{
     transform: scaleX(-1);
+}
+
+.araignées{
+    transform: rotate(-30deg);
 }
 
 
@@ -557,6 +563,22 @@ span{
 
 footer{
     background-color: var(--Jaune);
+    position: relative;
+    margin-top: 20dvw;
+    padding: 50px;
+}
+
+.emeu{
+    position:absolute;
+    height: 20dvw;
+    transform: translateY(calc(-96% - 50px));
+    margin-left: 20%;
+}
+.manchot{
+    position:absolute;
+    height: 10dvw;
+    transform: translateY(calc(-90% - 50px));
+    margin-left: 55%;
 }
 
 
@@ -611,37 +633,156 @@ footer{
 /* mammifère */
 
 .chauve-souris{
-    width: 10vw;
-    z-index: 8;
-    border-radius: 100px 100px 30px 30px ;
-    bottom: 0px;
-    margin-left: 50%;
-    transform: translateX(-50%) translateY(5%);
+    width: 40%;
+    z-index: 0;
+    border-radius: 0px 200px 30px 30px ;
+    margin-left: 100%;
+    transform: translateX(-80%) translateY(-10%);
 }
 
 .dingos{
-    width: 10vw;
+    width: 30%;
     z-index: 8;
-    border-radius: 100px 100px 30px 30px ;
-    bottom: 0px;
-    margin-left: 50%;
+    border-radius: 74px 10px 30px 10px ;
+    bottom: -10px;
+    margin-left: 75%;
     transform: translateX(-50%) translateY(5%);
 }
 
 .dugong{
-    width: 10vw;
-    z-index: 8;
-    border-radius: 100px 100px 30px 30px ;
-    bottom: 0px;
-    margin-left: 50%;
+    width: 80%;
+    z-index: 0;
+    border-radius: 10px 100% 10px 30px ;
+    top: -20px;
+    margin-left: 30%;
     transform: translateX(-50%) translateY(5%);
 }
 
 .lion-de-mer{
-    width: 10vw;
+    width: 50%;
     z-index: 8;
-    border-radius: 100px 100px 30px 30px ;
-    bottom: 0px;
+    border-radius: 11px 100% 10px 60px ;
+    bottom: -5px;
+    margin-left: 35%;
+    transform: translateX(-50%) translateY(5%);
+}
+
+
+/* reptiles */
+
+.crocodile{
+    width: 80%;
+    z-index: 0;
+    border-radius: 70% 30px 10px 25% ;
+    top: 10px;
+    margin-left: 40%;
+    transform: translateX(-50%) translateY(5%) rotate(20deg);
+}
+
+.lezard{
+    width: 25%;
+    z-index: 9;
+    border-radius: 35px 40px 8px 20px ;
+    bottom: -5px;
     margin-left: 50%;
     transform: translateX(-50%) translateY(5%);
+    
+}
+
+.taipan{
+    width: 40%;
+    z-index: 0;
+    border-radius: 11px 11px 10px 60px ;
+    top: 5px;
+    margin-left: 77%;
+    transform: translateX(-50%) translateY(5%) rotate(40deg);
+}
+
+.tortue{
+    width: 50%;
+    z-index: 8;
+    border-radius: 60% 45% 70% 70% ;
+    bottom: -20px;
+    margin-left: 30%;
+    transform: translateX(-50%) translateY(5%);
+
+}
+
+.varan{
+    width: 65%;
+    z-index: 8;
+    border-radius: 65% 140px 10px 65% ;
+    bottom: -15px;
+    margin-left: 72%;
+    transform: translateX(-50%) translateY(5%);
+}
+
+
+/* ponsson et insect */
+
+.guepe{
+    width: 25%;
+    z-index: 8;
+    border-radius: 11px 10px 36% 45% ;
+    top: -2%;
+    margin-left: 78%;
+    transform: translateX(-50%) translateY(5%) rotate(18deg);
+}
+
+.poisson{
+    width: 45%;
+    z-index: 8;
+    border-radius: 40px 70px 30px 50px ;
+    bottom: -10px;
+    margin-left: 30%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1);
+}
+
+.Phyllopteryx{
+    width: 35%;
+    z-index: 8;
+    border-radius: 72px 0px 10px 65px ;
+    bottom: -20px;
+    margin-left: 80%;
+    transform: translateX(-50%) translateY(5%) rotate(10deg);
+}
+
+
+/* espèces éteintes */
+
+.éteint{
+    display: flex;
+    margin: auto 7.5%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.éteint>img{
+    height: 17dvw;
+}
+
+.Notomys_longue_queue{
+    transform: translateY(45%) translateX(10%);
+}
+
+/* espèces invasifs */
+
+.invasifs{
+    display: flex;
+    margin: auto 7.5%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.invasifs>img{
+    height: 18dvw;
+}
+
+.dromadaire{
+    height: 30dvw !important;
+}
+
+.lapin_img{
+    transform: scaleX(-1) translateY(-3%);
 }
