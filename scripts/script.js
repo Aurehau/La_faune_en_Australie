@@ -222,6 +222,33 @@ function positionL(i,liste){
   return ` left:${(Dx*100)/1094}%; top:${100-((Dy*100)/401)}%;`
 }
 
+
+/* animation Monomètre */
+
+
+function gererApparition() {
+  var rect = document.querySelector(".img_monomètres").getBoundingClientRect();
+
+  // Vérifiez si l'élément est entièrement visible dans la fenêtre
+  if (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  ) {
+    // Ajoutez la classe à l'élément
+    document.querySelector(".img_monomètres").classList.add("img_monomètres_petit");
+    document.querySelector(".monoAustralie").classList.add("monoAustralie_grand");
+    document.querySelector(".monoAustralie2").classList.add("monoAustralie_grand");
+  }
+}
+
+// Ajoutez un écouteur d'événements pour détecter le défilement de la page
+window.addEventListener("scroll", gererApparition);
+
+// Appelez la fonction une fois au chargement initial de la page
+gererApparition();
+
 document.querySelector(".graph").innerHTML += graphique(évolution_lapin);
 console.log(decimale(500005890));
 console.log(Math.ceil(500005890/ decimale(500005890))*decimale(500005890));

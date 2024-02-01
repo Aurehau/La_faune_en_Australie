@@ -325,14 +325,16 @@ span{
     background-color: var(--gris);
     /* display: grid; */
     float: left;
-    height: 54.4px;
     border-radius: 4px;
-    padding: 0px 8px 0px 13px;
+    padding: 8px 13px;
     align-items: center;
+    font-family: 'Kanit';
+    font-weight: 400;
 }
 
 .année{
     color: var(--Blanc);
+    font-size: 20px;
 }
 
 .nblapin{
@@ -499,7 +501,7 @@ span{
 .img_monomètres{
     display: flex;
     margin: 15vw 7.5% 10vw;
-    transition: 0.6s;
+    transition: 1s;
     height: 20vw;
 }
 
@@ -507,15 +509,15 @@ span{
     height: auto;
     width: 15vw;
     margin: auto;
-    transition: 0.6s;
+    transition: 1s;
 }
 
-.monoAustralie:hover{
+.monoAustralie_grand{
     scale: 2;
     transform: translateY(-100%);
 }
 
-.img_monomètres:hover{
+.img_monomètres_petit{
     margin: 25vw 10% 0vw ;
     gap: -2vw;
 }
@@ -545,6 +547,31 @@ span{
 
 .araignées{
     transform: rotate(-30deg);
+}
+
+
+.meduse{
+    animation: 10s ease-in-out 0s infinite alternate animFlotte;
+}
+
+.raie{
+    animation: 10s ease-in-out 0s infinite alternate animFlotte;
+    animation-delay: 0.3s;
+    transform: scaleX(-1);
+}
+
+@keyframes animFlotte {
+    0%, 100% {
+        transform: translateY(-10%);
+    }
+
+    50% {
+        transform: translateY( 10%);
+    }
+  }
+
+.retournement{
+    transform: scaleX(-1);
 }
 
 
