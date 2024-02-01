@@ -18,3 +18,12 @@ function curseur(obj){
     cursor.style.left = event.clientX + "px",
     cursor.style.top = event.clientY + "px";	// obj par exemple pour "objet appelant"
 }
+
+
+function curseuranimal(obj){
+    var cursor = obj.parentElement.querySelector('.camembert>.cursor');
+/*     console.log(obj);
+    console.log(cursor); */
+    cursor.style.left = event.clientX + "px",
+    cursor.style.top = event.clientY + "px";	// obj par exemple pour "objet appelant"
+}

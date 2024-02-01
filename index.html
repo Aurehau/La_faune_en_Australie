@@ -17,40 +17,44 @@
 
     <div class="espece_endemique">
         <div class="box">
-            <img class="chauve-souris" src="img/mammifères/chauve-souris-géantes-d-australie.png" alt="chauve-souris">
-            <img class="dingos" src="img/mammifères/Dingos.png" alt="Dingos">
-            <img class="dugong" src="img/mammifères/Dugong.png" alt="Dugong">
-            <img class="lion-de-mer" src="img/mammifères/lion-de-mer-australien.png" alt="lion de mer">
+            <img class="chauve-souris" src="img/mammifères/chauve-souris-géantes-d-australie.png" alt="chauve-souris" onmousemove="curseuranimal(this)">
+            <img class="dingos" src="img/mammifères/Dingos.png" alt="Dingos" onmousemove="curseuranimal(this)">
+            <img class="dugong" src="img/mammifères/Dugong.png" alt="Dugong" onmousemove="curseuranimal(this)">
+            <img class="lion-de-mer" src="img/mammifères/lion-de-mer-australien.png" alt="lion de mer" onmousemove="curseuranimal(this)">
 
             <h3>Mammifères</h3>
             <div class="camembert mammifères"></div>
         </div>
 
+
         <div class="box">
-            <img class="crocodile" src="img/Reptiles/crocodile_de_johnston.png" alt="crocodile de johnston">
-            <img class="lezard" src="img/Reptiles/lézard_à_collerette.png" alt="lézard à collerette">
-            <img class="taipan" src="img/Reptiles/taipan_du_désert.png" alt="taipan du désert">
-            <img class="tortue" src="img/Reptiles/tortue-caouanne.png" alt="tortue caouanne">
-            <img class="varan" src="img/Reptiles/varan-perenti.png" alt="varanperenti">
+            <img class="crocodile" src="img/Reptiles/crocodile_de_johnston.png" alt="crocodile de johnston" onmousemove="curseuranimal(this)">
+            <img class="lezard" src="img/Reptiles/lézard_à_collerette.png" alt="lézard à collerette" onmousemove="curseuranimal(this)">
+            <img class="taipan" src="img/Reptiles/taipan_du_désert.png" alt="taipan du désert" onmousemove="curseuranimal(this)">
+            <img class="tortue" src="img/Reptiles/tortue-caouanne.png" alt="tortue caouanne" onmousemove="curseuranimal(this)">
+            <img class="varan" src="img/Reptiles/varan-perenti.png" alt="varanperenti" onmousemove="curseuranimal(this)">
 
             <h3>Reptiles</h3>
             <div class="camembert reptiles"></div>
-            </div>
+        </div>
+
 
         <div class="box">
-            <img class="guepe" src="img/poisson&insecte/guepe_maçonne.png" alt="guepe maçonne">
-            <img class="poisson" src="img/poisson&insecte/poisson_papillon.png" alt="poisson papillon">
-            <img class="Phyllopteryx" src="img/poisson&insecte/Phyllopteryx.png" alt="Phyllopteryx">
+            <img class="guepe" src="img/poisson&insecte/guepe_maçonne.png" alt="guepe maçonne" onmousemove="curseuranimal(this)">
+            <img class="poisson" src="img/poisson&insecte/poisson_papillon.png" alt="poisson papillon" onmousemove="curseuranimal(this)">
+            <img class="Phyllopteryx" src="img/poisson&insecte/Phyllopteryx.png" alt="Phyllopteryx" onmousemove="curseuranimal(this)">
 
             <h3>Poisson & Insect</h3>
             <div class="camembert poisson_insect"></div>
         </div>
 
+
         <div class="box">
-            <img class="rainette" src="img/Reptiles/rainette-de-white.png" alt="grenouille">
+            <img class="rainette" src="img/Reptiles/rainette-de-white.png" alt="grenouille" onmousemove="curseuranimal(this)">
             <h3>Amphibiens</h3>
             <div class="camembert amphibiens"></div>
         </div>
+        
         <div class="code_couleur">
             <div>
                 <div class="carre_jaune"></div>
@@ -102,11 +106,26 @@
     <h2><span>L'Australie</span> est l'habitat de <span>2</span> des <span>5 espèces</span> existantes connues de <span>monotrèmes.</span>  </h2>
     
     <div class="img_monomètres">
-        <img src="img/monomètre/Zaglossus_attenboroughi.png" alt="échidné à long nez de Attenboroughi">
-        <img class="monoAustralie" src="img/monomètre/Zaglossus_aculeatus.png" alt="échidné à nez court">
-        <img src="img/monomètre/Zaglossus_bartoni.png" alt="échidné de Barton">
-        <img class="monoAustralie2" src="img/monomètre/ornithorynque.png" alt="ornithorynque">
-        <img src="img/monomètre/Zaglossus_bruijni.png" alt="échidné à longue trompe">
+        <div class="animal" >
+            <img src="img/monomètre/Zaglossus_attenboroughi.png" alt="échidné à long nez de Attenboroughi" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor"> Échidné à long nez de Attenboroughi </div>
+        </div>
+        <div class="animal monoAustralie" >
+            <img class="" src="img/monomètre/Zaglossus_aculeatus.png" alt="échidné à nez court" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor"> Échidné à nez court </div>
+        </div>
+        <div class="animal" >
+            <img src="img/monomètre/Zaglossus_bartoni.png" alt="échidné de Barton" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor"> Échidné de Barton </div>
+        </div>
+        <div class="animal monoAustralie2" >
+            <img class="" src="img/monomètre/ornithorynque.png" alt="ornithorynque" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor"> Ornithorynque </div>
+        </div>
+        <div class="animal" >
+            <img src="img/monomètre/Zaglossus_bruijni.png" alt="échidné à longue trompe" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor"> Échidné à longue trompe </div>
+        </div>
     </div>
     
     <p class="définition">Les <span>monotrèmes</span> (Monotremata) constituent un <span>ordre animal</span> regroupant des espèces <span>caractérisées</span> par le fait d'être à la fois <span>ovipares</span> et <span>mammifères</span> : ils <span>pondent</span> des <span>œufs</span> mais <span>allaitent leurs petits.</span>
@@ -118,14 +137,40 @@
     <h2>L'austalie est connue pour ses <span>nombreuses espèces venimeuses</span>, dont certaines <span>araignées</span>, les <span>scorpions</span>, les <span>ornithorynques</span>, les <span>pieuvres</span>, les <span>scyphozoaires</span> (où méduses), les <span>raies</span>, les <span>poissons-pierres</span> et </span>certains <span>mollusques.</span></h2>
 
     <div class="dégradé">
-        <img class="gauche araignées" src="img/venimeux/la_veuve_noire_à_dos_rouge.png" alt="une veuve noire à dos rouge">
-        <img class="scorpions" src="img/venimeux/Urodacus_yashenkoi.png" alt="un scorpions">
-        <img class="gauche retournement ornithorynque" src="img/monomètre/ornithorynque.png" alt="un ornithorynque">
-        <img class="retournement raie" src="img/venimeux/raie_à_queue_courte.png" alt="raie à queue courte">
-        <img class="gauche meduse" src="img/venimeux/cubomeduse-d-australie.png" alt="une méduse">
-        <img class="pieuvre" src="img/venimeux/pieuvre couleur.png" alt="pieuvre">
-        <img class="gauche retournement poisson_pierre" src="img/venimeux/poisson_pierre.png" alt="poisson pierre">
-        <img class="conus" src="img/venimeux/Conus_geographus.png" alt="Conus_geographus">
+
+        <div class="animal gauche" >
+            <img class="araignées" src="img/venimeux/la_veuve_noire_à_dos_rouge.png" alt="une veuve noire à dos rouge" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Veuve noire à dos rouge</div>
+        </div>
+        <div class="animal " >
+            <img class="scorpions" src="img/venimeux/Urodacus_yashenkoi.png" alt="un scorpions" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Urodacus yashenkoi</div>
+        </div>
+        <div class="animal gauche" >
+            <img class="retournement ornithorynque" src="img/monomètre/ornithorynque.png" alt="un ornithorynque" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Ornithorynque</div>
+        </div>
+        <div class="animal " >
+            <img class="retournement raie" src="img/venimeux/raie_à_queue_courte.png" alt="raie à queue courte" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Raie à queue courte</div>
+        </div>
+        <div class="animal gauche " >
+            <img class="meduse" src="img/venimeux/cubomeduse-d-australie.png" alt="une méduse"  onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Méduse</div>
+        </div>
+
+        <div class="animal " >
+            <img class="pieuvre" src="img/venimeux/pieuvre couleur.png" alt="pieuvre" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Pieuvre à anneaux bleus</div>
+        </div>
+        <div class="animal gauche" >
+            <img class="retournement poisson_pierre" src="img/venimeux/poisson_pierre.png" alt="poisson pierre" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Poisson pierre</div>
+        </div>
+        <div class="animal " >
+            <img class="conus" src="img/venimeux/Conus_geographus.png" alt="Conus_geographus" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Conus geographus</div>
+        </div>
 
     </div>
 
@@ -168,9 +213,19 @@
 
     <h2>Parmis les <span>nombreuses espèces</span> d'Australie <span>éteintes</span> on retrouve :</h2>
     <div class="éteint">
-        <img class="Bandicoot" src="img/éteint/Bandicoot_a_pied_de_porc.png" alt="Bandicoot a pied de porc">
-        <img class="Notomys_longue_queue" src="img/éteint/Notomys_à_longue_queue.png" alt="Notomys à longue queue">
-        <img class="tigre_de_tasmani" src="img/éteint/tigre_de_tasmani.png" alt="tigre de tasmani">
+        <div class="animal" >
+            <img class="Bandicoot" src="img/éteint/Bandicoot_a_pied_de_porc.png" alt="Bandicoot a pied de porc" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Bandicoot a pied de porc</div>
+        </div>
+        <div class="animal" >
+            <img class="Notomys_longue_queue" src="img/éteint/Notomys_à_longue_queue.png" alt="Notomys à longue queue" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Notomys à longue queue</div>
+        </div>
+        <div class="animal" >
+            <img class="tigre_de_tasmani" src="img/éteint/tigre_de_tasmani.png" alt="Tigre de tasmani" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Tigre de tasmani</div>
+        </div>
+        
     </div>
 
     <h2>S'il existe une <span>faune</span> aussi <span>varié</span> en <span>Australie</span>, c'est à cause du <span>nombre</span> de <span>climats</span> qu'on y retrouve.</h2>
@@ -183,15 +238,30 @@
     <h2>La <span>colonisation</span> de <span>l'Australie</span> a causé <span>l'importation</span> de nombreuses <span>espèces</span> dont certaines sont devenu <span>invasive.</span> C'est le cas des :</h2>
 
     <div class="invasifs">
-        <img class="crapaud_buffle" src="img/invasifs/crapaud_buffle.png" alt="crapaud buffle">
-        <img class="dromadaire" src="img/invasifs/dromadaire.png" alt="dromadaire">
+        <div class="animal" >
+            <img class="crapaud_buffle" src="img/invasifs/crapaud_buffle.png" alt="crapaud buffle"  onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Crapaud buffle</div>
+        </div>
+        <div class="animal dromadaire" >
+            <img class="dromadaire" src="img/invasifs/dromadaire.png" alt="dromadaire"  onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Dromadaire</div>
+        </div>
+        
+        
     </div>
 
 
     <h2> Des <span>solutions</span> pour <span>diminuer</span> les populations <span>d'espèces invasives</span> ont été mise en place comme <span>l'empoisonnement</span> des <span>renards</span> au fluoroacétate de sodium ou <span>l'introduction</span> d'une <span>maladie viral</span>, chez les <span>lapins</span>, la myxomatose.</h2>
     <div class="invasifs">
-        <img class="renards" src="img/invasifs/renards_roux.png" alt="renards roux">
-        <img class="lapin_img" src="img/invasifs/lapin_détouré.png" alt="lapin">
+        <div class="animal renards" >
+            <img class="renards" src="img/invasifs/renards_roux.png" alt="renards roux" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Renards roux</div>
+        </div>
+        <div class="animal" onmousemove="curseur(this)">
+            <img class="lapin_img" src="img/invasifs/lapin_détouré.png" alt="lapin" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor"> Lapin</div>
+        </div>
+        
     </div>
     
     
@@ -250,8 +320,16 @@
 
 
     <footer>
-        <img class="emeu" src="img/Emeu.png" alt="Emeu">
-        <img class="manchot" src="img/manchot_pygmée.png" alt="manchot pygmée">
+        <div class="animal emeu" >
+            <img src="img/Emeu.png" alt="Emeu" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor"> Emeu</div>
+        </div>
+        <div class="animal manchot" >
+            <img class="" src="img/manchot_pygmée.png" alt="manchot pygmée" onmousemove="curseur(this)">
+            <div class='cursor' id="cursor">Manchot pygmée </div>
+        </div>
+        
+        
         <a href="pages/sources.html">voir les sources</a>
         <div>Aurélien HAUPTMANN-HERBETTE</div>
     </footer>

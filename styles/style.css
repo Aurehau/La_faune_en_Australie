@@ -98,7 +98,7 @@ span{
     height: 100%;
 }
 
-.part:hover ~ .cursor{
+.part:hover ~ .cursor, .box>img:hover ~ .mammifères>.cursor, .box>img:hover ~ .reptiles>.cursor, .box>img:hover ~ .poisson_insect>.cursor, .box>img:hover ~ .amphibiens>.cursor{
     width: auto;
     height: auto;
     display: block;
@@ -505,7 +505,7 @@ span{
     height: 20vw;
 }
 
-.img_monomètres>img{
+.img_monomètres>div{
     height: auto;
     width: 15vw;
     margin: auto;
@@ -522,12 +522,26 @@ span{
     gap: -2vw;
 }
 
+
+.img_monomètres>.monoAustralie_grand>.cursor{
+    scale: 1;
+    transform: translateY(-100%);
+}
+
+
 /* venimeux */
 
 .dégradé{
     padding: 40px 20px 50px;
     background: linear-gradient(var(--Noir) 20%, var(--bleu_foncé)50% 70%, var(--Noir));
 
+}
+
+.dégradé>div{
+    width: 35vw;
+    display: block;
+    margin-top: -3%;
+    margin-bottom: -3%;
 }
 
 .dégradé>img{
@@ -550,23 +564,64 @@ span{
 }
 
 
-.meduse{
-    animation: 10s ease-in-out 0s infinite alternate animFlotte;
-}
-
 .raie{
     animation: 10s ease-in-out 0s infinite alternate animFlotte;
-    animation-delay: 0.3s;
     transform: scaleX(-1);
+    --sens: scaleX(-1) ;
+    --ondule1: 3deg;
+    --ondule2: -3deg;
+}
+
+.meduse{
+    animation: 10s ease-in-out 0s infinite alternate animFlotte;
+    animation-delay: -9.25s;
+    --sens: scaleX(1);
+    --ondule1: 5deg;
+    --ondule2: -5deg;
+    
+}
+
+.pieuvre{
+    animation: 10s ease-in-out 0s infinite alternate animFlotte;
+    animation-delay: -8.5s;
+    --sens: scaleX(1);
+    --ondule1: -5deg;
+    --ondule2: 5deg;
+}
+
+.poisson_pierre{
+    animation: 10s ease-in-out 0s infinite alternate animFlotte;
+    animation-delay: -8s;
+    --sens: scaleX(-1);
+    --ondule1: 1deg;
+    --ondule2: -1deg;
 }
 
 @keyframes animFlotte {
     0%, 100% {
-        transform: translateY(-10%);
+        transform: translateY(-10%) var(--sens) skewY(var(--ondule1));
     }
 
     50% {
-        transform: translateY( 10%);
+        transform: translateY( 10%) var(--sens) skewY(var(--ondule2));
+    }
+  }
+
+.conus{
+    animation: 10s ease-in-out 0s infinite alternate animFlotteFond;
+    animation-delay: -8s;
+    --sens: scaleX(1);
+    --ondule1: 1deg;
+    --ondule2: -1deg;
+}
+
+@keyframes animFlotteFond {
+    0%, 100% {
+        transform: translateY(-1%) translateX(-1%) var(--sens) skewY(var(--ondule1));
+    }
+
+    50% {
+        transform: translateY( 1%) translateX(1%) var(--sens) skewY(var(--ondule2));
     }
   }
 
@@ -624,6 +679,11 @@ footer{
     margin-bottom: 30px;
 }
 
+
+.rainette:hover ~ .amphibiens>.cursor> .rainetteC{
+    display: block !important;
+}
+
 .rainette{
     width: 10vw;
     position: absolute;
@@ -652,10 +712,24 @@ footer{
     white-space: nowrap;
 }
 
-.box>img{
+.box>.animal, .box>img{
     position: absolute;
+
 }
 
+.Nom_Animal{
+    display: none;
+    background-color: var(--gris);
+    /* display: grid; */
+    float: left;
+    border-radius: 4px;
+    padding: 8px 13px;
+    align-items: center;
+    font-family: 'Kanit';
+    font-weight: 400;
+    color: var(--Jaune);
+    font-size: 20px;
+}
 
 /* mammifère */
 
@@ -666,6 +740,11 @@ footer{
     margin-left: 100%;
     transform: translateX(-80%) translateY(-10%);
 }
+
+.chauve-souris:hover ~ .mammifères>.cursor> .chauve-sourisC, .dingos:hover ~ .mammifères>.cursor> .dingosC, .dugong:hover ~ .mammifères>.cursor> .dugongC, .lion-de-mer:hover ~ .mammifères>.cursor> .lion-de-merC{
+    display: block !important;
+}
+
 
 .dingos{
     width: 30%;
@@ -693,9 +772,60 @@ footer{
     margin-left: 35%;
     transform: translateX(-50%) translateY(5%);
 }
+/* 
+.chauve-souris{
+    width: 40%;
+    z-index: 0;
+    border-radius: 0px 200px 30px 30px ;
+    margin-left: 100%;
+}
+
+.chauve-souris>img{
+    transform: translateX(-80%) translateY(-10%);
+}
+
+.dingos{
+    width: 30%;
+    z-index: 8;
+    border-radius: 74px 10px 30px 10px ;
+    bottom: -10px;
+    margin-left: 75%;
+}
+
+.dingos>img{
+    transform: translateX(-50%) translateY(5%);
+}
+
+.dugong{
+    width: 80%;
+    z-index: 0;
+    border-radius: 10px 100% 10px 30px ;
+    top: -20px;
+    margin-left: 30%;
+}
+
+.dugong>img{
+    transform: translateX(-50%) translateY(5%);
+}
+
+.lion-de-mer{
+    width: 50%;
+    z-index: 7;
+    border-radius: 11px 100% 10px 60px ;
+    bottom: -5px;
+    margin-left: 35%;
+}
+
+.lion-de-mer>img{
+    transform: translateX(-50%) translateY(5%);
+} */
 
 
 /* reptiles */
+
+.crocodile:hover ~ .reptiles>.cursor> .crocodileC, .lezard:hover ~ .reptiles>.cursor> .lezardC, .taipan:hover ~ .reptiles>.cursor> .taipanC, .tortue:hover ~ .reptiles>.cursor> .tortueC, .varan:hover ~ .reptiles>.cursor> .varanC{
+    display: block !important;
+}
 
 .crocodile{
     width: 80%;
@@ -745,7 +875,11 @@ footer{
 }
 
 
-/* ponsson et insect */
+/* poisson et insect */
+
+.guepe:hover ~ .poisson_insect>.cursor> .guepeC, .poisson:hover ~ .poisson_insect>.cursor> .poissonC, .Phyllopteryx:hover ~ .poisson_insect>.cursor> .PhyllopteryxC{
+    display: block !important;
+}
 
 .guepe{
     width: 25%;
@@ -784,7 +918,7 @@ footer{
     justify-content: space-between;
 }
 
-.éteint>img{
+.éteint>.animal{
     height: 17dvw;
 }
 
@@ -802,7 +936,7 @@ footer{
     align-items: flex-end;
 }
 
-.invasifs>img{
+.invasifs>.animal{
     height: 18dvw;
 }
 
@@ -812,4 +946,27 @@ footer{
 
 .lapin_img{
     transform: scaleX(-1) translateY(-3%);
+}
+
+.animal>img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*hover animaux*/
+
+.animal:hover>.cursor{
+    display: block;
+    background-color: var(--gris);
+    /* display: grid; */
+    float: left;
+    border-radius: 4px;
+    padding: 8px 13px;
+    align-items: center;
+    font-family: 'Kanit';
+    font-weight: 400;
+    color: var(--Jaune);
+    font-size: 20px;
 }

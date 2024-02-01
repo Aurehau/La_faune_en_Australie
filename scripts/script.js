@@ -249,6 +249,13 @@ window.addEventListener("scroll", gererApparition);
 // Appelez la fonction une fois au chargement initial de la page
 gererApparition();
 
+document.querySelector(".mammifères>.cursor").innerHTML+="<div class='Nom_Animal chauve-sourisC'>Chauve souris géantes d'australie </div> <div class='Nom_Animal dingosC'> Dingos </div><div class='Nom_Animal dugongC'> Dugong </div><div class='Nom_Animal lion-de-merC'> Lion de mer australien </div>";
+document.querySelector(".reptiles>.cursor").innerHTML+=" <div class='Nom_Animal crocodileC'> Crocodile de johnston </div> <div class='Nom_Animal lezardC'> Lézard à collerette </div> <div class='Nom_Animal taipanC'> Taipan du désert </div> <div class='Nom_Animal tortueC'> Tortue caouanne </div> <div class='Nom_Animal varanC'> Varanperenti </div>";
+document.querySelector(".poisson_insect>.cursor").innerHTML+=" <div class='Nom_Animal guepeC'> Guêpe maçonne </div> <div class='Nom_Animal poissonC'> Poisson papillon </div> <div class='Nom_Animal PhyllopteryxC'> Phyllopteryx </div>";
+document.querySelector(".amphibiens>.cursor").innerHTML+=" <div class='Nom_Animal rainetteC'> Rainette de white </div> ";
+
+
+
 document.querySelector(".graph").innerHTML += graphique(évolution_lapin);
 console.log(decimale(500005890));
 console.log(Math.ceil(500005890/ decimale(500005890))*decimale(500005890));
