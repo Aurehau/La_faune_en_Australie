@@ -238,8 +238,8 @@ function gererApparition() {
   ) {
     // Ajoutez la classe à l'élément
     document.querySelector(".img_monomètres").classList.add("img_monomètres_petit");
-    document.querySelector(".monoAustralie").classList.add("monoAustralie_grand");
-    document.querySelector(".monoAustralie2").classList.add("monoAustralie_grand");
+    document.querySelector(".monoAustralie>img").classList.add("monoAustralie_grand");
+    document.querySelector(".monoAustralie2>img").classList.add("monoAustralie_grand");
   }
 }
 
@@ -253,6 +253,7 @@ document.querySelector(".mammifères>.cursor").innerHTML+="<div class='Nom_Anima
 document.querySelector(".reptiles>.cursor").innerHTML+=" <div class='Nom_Animal crocodileC'> Crocodile de johnston </div> <div class='Nom_Animal lezardC'> Lézard à collerette </div> <div class='Nom_Animal taipanC'> Taipan du désert </div> <div class='Nom_Animal tortueC'> Tortue caouanne </div> <div class='Nom_Animal varanC'> Varanperenti </div>";
 document.querySelector(".poisson_insect>.cursor").innerHTML+=" <div class='Nom_Animal guepeC'> Guêpe maçonne </div> <div class='Nom_Animal poissonC'> Poisson papillon </div> <div class='Nom_Animal PhyllopteryxC'> Phyllopteryx </div>";
 document.querySelector(".amphibiens>.cursor").innerHTML+=" <div class='Nom_Animal rainetteC'> Rainette de white </div> ";
+document.querySelector(".marsupiales>.cursor").innerHTML+=" <div class='Nom_Animal AcrobateC'> Acrobate pygmée </div>  <div class='Nom_Animal KoalaC'> Koala </div>   <div class='Nom_Animal quokkasC'> Quokkas </div>   <div class='Nom_Animal wallabyC'> Wallaby </div>   <div class='Nom_Animal KangourouC'> Kangourou </div>   <div class='Nom_Animal wombat_vombatusC'> Wombat vombatus ursinus </div>   <div class='Nom_Animal wambat_nez_poiluC'> Wambat à nez poilu du nord </div>   <div class='Nom_Animal Bandicoot_brun_sudC'> Bandicoot brun du sud </div>   <div class='Nom_Animal bandicoot_lapinC'> bandicoot lapin </div>   <div class='Nom_Animal bandicoot_rayé_estC'> Bandicoot rayé de l'est </div>   <div class='Nom_Animal chat_marsupialC'> Chat marsupial moucheté </div>   <div class='Nom_Animal taupeC'> Taupe marsupiale </div>   <div class='Nom_Animal tigre_de_tasmani2C'> Tigre de tasmani </div>    <div class='Nom_Animal diable_de_tasmanieC'> Diable de tasmanie </div>";
 
 
 

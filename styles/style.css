@@ -98,7 +98,7 @@ span{
     height: 100%;
 }
 
-.part:hover ~ .cursor, .box>img:hover ~ .mammifères>.cursor, .box>img:hover ~ .reptiles>.cursor, .box>img:hover ~ .poisson_insect>.cursor, .box>img:hover ~ .amphibiens>.cursor{
+.part:hover ~ .cursor, .box>img:hover ~ .mammifères>.cursor, .box>img:hover ~ .reptiles>.cursor, .box>img:hover ~ .poisson_insect>.cursor, .box>img:hover ~ .amphibiens>.cursor, .régime>img:hover ~ .marsupiales>.cursor{
     width: auto;
     height: auto;
     display: block;
@@ -421,10 +421,10 @@ span{
     gap: 20px;
 }
 
-.espece_endemique>div:last-child{
+/* .espece_endemique>div:last-child{
     grid-area: 2/3;
     margin: auto;
-}
+} */
 
 .code_couleur{
     display: flex;
@@ -512,10 +512,20 @@ span{
     transition: 1s;
 }
 
-.monoAustralie_grand>img{
-    scale: 2;
-    transform: translateY(-100%);
+.monoAustralie_grand{
+    animation: 1s forwards monoAustralie;
 }
+
+@keyframes monoAustralie {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        scale: 2;
+        transform: translateY(-100%);
+    };
+}
+
 
 
 .img_monomètres_petit{
@@ -646,6 +656,25 @@ footer{
     position: relative;
     margin-top: 20dvw;
     padding: 50px;
+    font-size: 16px;
+    font-family: 'Kanit';
+    font-weight: 400;
+}
+
+footer>div{
+    color: var(--Noir);
+}
+
+footer>a{
+    color: var(--gris);
+}
+
+.consigne{
+    display: block;
+}
+
+.consigneMobile{
+    display: none;
 }
 
 .emeu{
@@ -977,6 +1006,266 @@ footer{
 }
 
 
+
+
+/* Marsupiaux image */
+
 .régime{
     position: relative;
+}
+
+.régime>img{
+    max-width: 80vw;
+}
+
+
+.Acrobate:hover ~ .marsupiales>.cursor> .AcrobateC,  .Koala:hover ~ .marsupiales>.cursor> .KoalaC,  .quokkas:hover ~ .marsupiales>.cursor> .quokkasC,  .wallaby:hover ~ .marsupiales>.cursor> .wallabyC,  .Kangourou:hover ~ .marsupiales>.cursor> .KangourouC,  .wombat_vombatus:hover ~ .marsupiales>.cursor> .wombat_vombatusC,  .wambat_nez_poilu:hover ~ .marsupiales>.cursor> .wambat_nez_poiluC,  .Bandicoot_brun_sud:hover ~ .marsupiales>.cursor> .Bandicoot_brun_sudC,  .bandicoot_lapin:hover ~ .marsupiales>.cursor> .bandicoot_lapinC,  .bandicoot_rayé_est:hover ~ .marsupiales>.cursor> .bandicoot_rayé_estC,  .chat_marsupial:hover ~ .marsupiales>.cursor> .chat_marsupialC,  .taupe:hover ~ .marsupiales>.cursor> .taupeC,  .tigre_de_tasmani2:hover ~ .marsupiales>.cursor> .tigre_de_tasmani2C,  .diable_de_tasmanie:hover ~ .marsupiales>.cursor> .diable_de_tasmanieC{
+    display: block !important;
+}
+
+.Acrobate{
+    width: 5%;
+    z-index: 8;
+    border-radius: 60% 50% 36% 20% ;
+    top: 35%;
+    margin-left: 72%;
+    transform: translateX(-50%) translateY(5%) rotate(40deg);
+}
+
+.Koala{
+    width: 10%;
+    z-index: 9;
+    border-radius: 45% 15% 20% 35% ;
+    bottom: -40px;
+    margin-left: 47%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1);
+}
+
+.quokkas{
+    width: 5%;
+    z-index: 9;
+    border-radius: 50% 15% 10% 20% ;
+    bottom: -35px;
+    margin-left: 53%;
+    transform: translateX(-50%) translateY(5%) ;
+}
+
+.wallaby{
+    width: 13%;
+    z-index: 9;
+    border-radius: 5% 90% 20% 12% ;
+    bottom: -30px;
+    margin-left: 67%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1);
+    clip-path: polygon(45% 29%, 63% 38%, 71% 84%, 100% 88%, 100% 99%, 0 100%, 1% 0, 34% 0);
+}
+
+.Kangourou{
+    width: 28%;
+    z-index: 9;
+    border-radius: 20% 100% 10px 20% ;
+    bottom: -25px;
+    margin-left: 57%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1);
+    clip-path: polygon(0 0, 28% 0, 65% 36%, 68% 75%, 100% 84%, 100% 100%, 0 100%);
+}
+
+.wombat_vombatus{
+    width: 17%;
+    z-index: 8;
+    border-radius: 20% 45% 20% 15% ;
+    bottom: -35px;
+    margin-left: 80%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1) rotate(-5deg);
+    clip-path: polygon(0 0, 0 53%, 11% 70%, 11% 89%, 0 100%, 100% 100%, 100% 0, 33% 4%);
+}
+
+.wambat_nez_poilu{
+    width: 13%;
+    z-index: 8;
+    border-radius: 30% 40% 50% 10% ;
+    bottom: -42px;
+    margin-left: 75%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1);
+}
+
+.Bandicoot_brun_sud{
+    width: 11%;
+    z-index: 7;
+    border-radius: 60% 70% 40% 20% ;
+    bottom: -45px;
+    margin-left: 87%;
+    transform: translateX(-50%) translateY(5%) rotate(5deg);
+}
+
+.bandicoot_lapin{
+    width: 10%;
+    z-index: 8;
+    border-radius: 60% 3% 10% 30%;
+    bottom: -35px;
+    margin-left: 15%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1);
+}
+
+.bandicoot_rayé_est{
+    width: 10%;
+    z-index: 7;
+    border-radius: 72px 0px 10px 65px ;
+    bottom: 10%;
+    margin-left: 79%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1) rotate(30deg);
+}
+
+.chat_marsupial{
+    width: 17%;
+    z-index: 8;
+    border-radius: 0px 10% 30% 0px  ;
+    bottom: -30px;
+    margin-left: 23%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1);
+}
+
+.taupe{
+    width: 6%;
+    z-index: 9;
+    border-radius: 45% 50% 20% 25% ;
+    bottom: -35px;
+    margin-left: 50%;
+    transform: translateX(-50%) translateY(5%) ;
+}
+
+.tigre_de_tasmani2{
+    width: 25%;
+    z-index: 9;
+    border-radius: 24% 55% 40% 10% ;
+    bottom: -43px;
+    margin-left: 40%;
+    transform: translateX(-50%) translateY(5%) ;
+}
+
+.diable_de_tasmanie{
+    width: 20%;
+    z-index: 8;
+    border-radius: 50% 25% 55% 3% ;
+    bottom: -35px;
+    margin-left: 30%;
+    transform: translateX(-50%) translateY(5%) scaleX(-1) rotate(5deg);
+}
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    h1{
+        font-size: 55px;
+    }
+
+    .ligne{
+        background: var(--Blanc);
+        width: 20vw;
+        height: 1vw;
+        position: absolute;
+        right: -15px;
+        bottom: 0px;
+    }
+    
+    h2{
+        font-size: 35px;
+    }
+    
+    p{
+        font-size: 20px;        
+    }
+    
+    .définition{
+        font-size: 15px;
+    }
+
+    /* endémqie grid */
+
+    .espece_endemique{
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 0px 7.5%;
+        gap: 20px;
+    }
+    
+    .espece_endemique>div:last-child{
+        
+        margin: auto;
+    }
+
+    .espece_endemique .camembert {
+        height: 40vw;
+        width: 40vw;
+    }
+
+    /* pas flex */
+
+    .flex_par2{
+        display: block;
+        margin: auto 7.5%;
+    }
+
+    /* footer */
+
+    .consigne{
+        display: none;
+    }
+    
+    .consigneMobile{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+    h1{
+        font-size: 30px;
+    }
+
+    .ligne{
+        background: var(--Blanc);
+        width: 20vw;
+        height: 1vw;
+        position: absolute;
+        right: -15px;
+        bottom: 0px;
+    }
+    
+    h2{
+        font-size: 18px;
+    }
+    
+    p{
+        font-size: 16px;        
+    }
+    
+    .définition{
+        font-size: 14px;
+    }
+
+
+    /* endémqie grid */
+
+    .espece_endemique{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0px 20%;
+        gap: 20px;
+    }
+    
+    .espece_endemique>div:last-child{
+        grid-area: 0/7 ;
+        margin: auto;
+    }
+
+    .espece_endemique .camembert {
+        height: 50vw;
+        width: 50vw;
+    }
 }
