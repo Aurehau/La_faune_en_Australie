@@ -1152,8 +1152,140 @@ footer>a{
     transform: translateX(-50%) translateY(5%) scaleX(-1) rotate(5deg);
 }
 
+.NomVert{
+    text-decoration: underline 3px var(--Vert);
+}
+
+.NomJaune{
+    text-decoration: underline 3px var(--Jaune);
+}
+
+.NomSable{
+    text-decoration: underline 3px var(--Sable);
+}
 
 
+/* compteur */
+
+
+.year1 {
+    animation: anné1 10s cubic-bezier(0.18,-0.08, 0.57, 0.42) infinite;
+    text-align: center;
+    }
+    
+@keyframes anné1 {
+    0%,24% {
+        display: block;
+    }
+    25%,49% {
+        display: none;    
+    }
+    50%,74% {
+        display: none;    
+    }
+    75%,100% {
+        display: none;    
+    }
+
+}
+
+.year2 {
+    animation: anné2 10s cubic-bezier(0.18,-0.08, 0.57, 0.42) infinite;
+    text-align: center;
+    }
+    
+@keyframes anné2 {
+    0%, 25% {
+        display: none;
+    }
+    26%, 49% {
+        display: block;    
+    }
+    50%,74% {
+        display: none;    
+    }
+    75%,100% {
+        display: none;    
+    }
+
+}
+
+.year3 {
+    animation: anné3 10s cubic-bezier(0.18,-0.08, 0.57, 0.42) infinite;
+    text-align: center;
+    }
+    
+@keyframes anné3 {
+    0%,24% {
+        display: none;
+    }
+    25%, 50% {
+        display: none;    
+    }
+    51%, 74% {
+        display: block;    
+    }
+    75%,100% {
+        display: none;    
+    }
+
+}
+
+.year4 {
+    animation: anné4 10s cubic-bezier(0.18,-0.08, 0.57, 0.42) infinite;
+    text-align: center;
+    }
+    
+@keyframes anné4 {
+    0%,24% {
+        display: none;
+    }
+    25%,49% {
+        display: none;    
+    }
+    50%, 75% {
+        display: none;    
+    }
+    76%,100% {
+        display: block;    
+    }
+
+}
+
+.key-years{
+    height: 80px;
+}
+
+.compteur>h2{
+    margin: 0px 0px 10px;
+}
+
+
+/* liens source */
+
+.bouton{
+    color: var(--Blanc);
+    background-color: var(--Jaune);
+    border-radius: 50px;
+    font-family: 'Kanit';
+    font-weight: 400;
+    text-decoration: none;
+    padding: 4px 8px;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.bouton ~ a{
+    color: var(--Jaune);
+    font-family: 'Kanit';
+    font-weight: 400;
+    padding: 4px 8px;
+    display: block;
+    word-wrap: break-word;
+    width: 80%;
+    margin: 20px 10%;
+}
 
 
 
@@ -1198,7 +1330,7 @@ footer>a{
         margin: auto;
     }
 
-    .espece_endemique .camembert {
+    .espece_endemique .camembert, .le_S>div>.camembert {
         height: 40vw;
         width: 40vw;
     }
@@ -1210,6 +1342,19 @@ footer>a{
         margin: auto 7.5%;
     }
 
+
+    .compteur>p, .carte, .le_S>div{
+        width: 100%;
+        height: auto;
+    }
+
+
+    .le_S {
+        margin: auto 0px auto 0px;
+        align-items: center;
+    }
+
+
     /* footer */
 
     .consigne{
@@ -1219,6 +1364,7 @@ footer>a{
     .consigneMobile{
         display: block;
     }
+
 }
 
 
@@ -1238,7 +1384,7 @@ footer>a{
     }
     
     h2{
-        font-size: 18px;
+        font-size: 20px;
     }
     
     p{
@@ -1264,7 +1410,7 @@ footer>a{
         margin: auto;
     }
 
-    .espece_endemique .camembert {
+    .espece_endemique .camembert, .le_S>div>.camembert {
         height: 50vw;
         width: 50vw;
     }
