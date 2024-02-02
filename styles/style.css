@@ -1331,8 +1331,8 @@ footer>a{
     }
 
     .espece_endemique .camembert, .le_S>div>.camembert {
-        height: 40vw;
-        width: 40vw;
+        height: 40dvw;
+        width: 40dvw;
     }
 
     /* pas flex */
@@ -1376,7 +1376,7 @@ footer>a{
 
     .ligne{
         background: var(--Blanc);
-        width: 20vw;
+        width: 20dvw;
         height: 1vw;
         position: absolute;
         right: -15px;
@@ -1411,7 +1411,7 @@ footer>a{
     }
 
     .espece_endemique .camembert, .le_S>div>.camembert {
-        height: 50vw;
-        width: 50vw;
+        height: 50dvw;
+        width: 50dvw;
     }
 }
