@@ -717,7 +717,7 @@ footer{
     white-space: nowrap;
 }
 
-.box>.animal, .box>img{
+.box>.animal, .box>img, .régime>img{
     position: absolute;
 
 }
@@ -974,4 +974,9 @@ footer{
     font-weight: 400;
     color: var(--Jaune);
     font-size: 20px;
+}
+
+
+.régime{
+    position: relative;
 }
