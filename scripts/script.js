@@ -152,11 +152,11 @@ function graphique(table) {
     boule+=`<div style=" left:${coordonnées[0]}%;  top:${coordonnées[1]}%"><div class='cursor' id="cursor"><div class='année'>${element.année}</div><div class='nblapin'>${ajout_espace(element.nb)} lapin</div></div></div>`
   });
 
-  console.log(toutes_les_coordonnées);
+  //console.log(toutes_les_coordonnées);
   for ( let i=0 ; i <toutes_les_coordonnées.length-1; i++ ){   // attention au -1 qui peut tout casser
     if(toutes_les_coordonnées[i+1].y>toutes_les_coordonnées[i].y && 42<(toutes_les_coordonnées[i+1].y-toutes_les_coordonnées[i].y)){
         icones+=`    <svg  class="lapin" xmlns="http://www.w3.org/2000/svg" width="8vw" height="6.4vw" viewBox="0 0 312 249" fill="none" style="--angleL: ${angle(i,toutes_les_coordonnées)}deg; ${positionL(i,toutes_les_coordonnées)}"><path stroke="#FFCD05" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
-        console.log(icones);
+        //console.log(icones);
     }
     
   };

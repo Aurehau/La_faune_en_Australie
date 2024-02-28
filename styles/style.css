@@ -16,7 +16,9 @@ body{
 
 .cursor {
     position: fixed;
-    transform: translateX(-50%) translateY(-100%);
+    top: 0%;
+    left: 0%;
+    /*transform: translateX(-50%) translateY(-100%);*/
     pointer-events: none;
      /*for dark and light modes */
     z-index: 10000;
